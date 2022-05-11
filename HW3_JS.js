@@ -18,9 +18,6 @@ while (stepen < 11) {
 // let result = 1
 // let stepen = 1
 
-let result = 1
-let stepen = 1
-
 const entAimStepen = function(aimStepen) {
 	while (stepen <= aimStepen) {
 		result = result * 2
