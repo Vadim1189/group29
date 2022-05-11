@@ -7,7 +7,6 @@ let item_6 = 15;
 let item_6_type = typeof item_6;
 let item_7 = String(item_6);
 let item_7_type = typeof item_7;
-
 console.log(item_1);
 console.log(item_2);
 console.log(item_3); 
