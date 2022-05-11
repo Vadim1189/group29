@@ -1,7 +1,7 @@
 let item_1 = 5;
 let item_2 = 3;
 let item_3 = item_1 + item_2;
-let item_4 = "Yolochka";
+let item_4 = "Test";
 let item_5 = item_3;
 let item_6 = 15;
 let item_6_type = typeof item_6;
@@ -23,10 +23,10 @@ let age_3 = 60;
 
 if (age_1 < age_2) {
     console.log("You don't have acces cause your age is " + age_1 + ". It's less then " + age_2 + ".");
-} else if (age_1 >= age_2 && age_1 <= age_3) { ).
+} else if (age_1 >= age_2 && age_1 <= age_3) {
     console.log("Welcome!");
 } else if (age_1 > age_3) {
-    console.log("Keep calm and look the Culture channel.");
+    console.log("Keep calm and look the culture channel");
 } else {
-    console.log("Technical work.");
+    console.log("Technical work");
 }
