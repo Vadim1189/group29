@@ -1,0 +1,63 @@
+Windows 10 / Git Bash
+ 
+1) Посмотреть где я: pwd
+2) Создать папку: mkdir main_dir
+3) Зайти в папку: cd main_dir
+4) Создать 3 папки:	mkdir dir10 dir20 dir30
+5) Зайти в любую папку: cd dir10
+6) Создать 5 файлов (3 txt, 2 json): touch t1.txt t2.txt t3.txt j1.json j2.json
+7) Создать 3 папки: mkdir dir11 dir12 dir13
+8) Вывести список содержимого папки: ls -l
+9) + Открыть любой txt файл   $ vim t1.txt  
+Или через cat t1.txt
+10) + написать туда что-нибудь, любой текст. 
+vim t1.txt
+Далее активировать режим Insert (вводим i)
+Name1
+Name2
+Name3
+или через cat>>t1.txt
+Name4
+Name5
+Name6
+11) + сохранить и выйти. Сtrl + c
+12) Выйти из папки на уровень выше: cd ..
+13) переместить любые 2 файла, 
+которые вы создали, в любую другую папку: mv t1.txt t2.txt dir11
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку:
+cp t2.txt t3.json e:/gbash/main_dir/dir11
+15) Найти файл по имени: find t2.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+tail -f t2.txt | grep "искомое значение либо пустота"
+а так же: tail -f 11.txt | grep --line-buffered "искомое значение" | >&1 dir name.txt
+17) вывести несколько первых строк из текстового файла: head -2 t2.txt
+18) вывести несколько последних строк из текстового файла: tail -3  t2.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less t2.txt (less –N ee.txt) покажет номера строк
+выйти  q
+20) вывести дату и время:  date 
+
+Задание *
+1) Отправить http запрос на сервер.
+
+$ curl -X POST "http://162.55.220.72:5005/get_method?name="Vadim"&age=31"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    18  100    18    0     0    139      0 --:--:-- --:--:-- --:--:--   141"Natalia MOLODEC"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+	 
+cat >> script.sh
+#!/bin/bash
+cd script
+mkdir name1 name2 name3
+cd name3
+touch text_1.txt text_2.txt text_3.txt j_4.json j_5.json
+mkdir name4 name5 name6
+ls -l
+mv text_1.txt text_2.txt text_3.txt name4
+chmod +x script.sh
+./script.sh
+
+
