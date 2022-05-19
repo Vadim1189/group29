@@ -159,9 +159,9 @@ pm.test("compare 6m_qa_salary", function () {
 
 
 18. Проверить, что параметр **qa_salary_after_3.5_years** равен **salary*3.8** из request (salary забрать из request.)
-pm.test("compare 12m_qa_salary", function () {
 
-`pm.expect(resp.qa_salary_after_12_months).eql(req.salary*2.7);
+`pm.test("compare 12m_qa_salary", function () {
+  pm.expect(resp.qa_salary_after_12_months).eql(req.salary*2.7);
 });`
 
 
@@ -182,7 +182,7 @@ pm.test("compare 12m_qa_salary", function () {
 21. Проверить, что параметр **u_salary_5_years** равен salary*4.2 из request (salary забрать из request.)
 `pm.test("compare_u_salary_5_years", function () {
     pm.expect(resp.person.u_salary_5_years).eql((req.salary)*4.2);
-});``
+});`
 
 
 22. Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
