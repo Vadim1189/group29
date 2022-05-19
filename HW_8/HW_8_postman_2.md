@@ -180,6 +180,7 @@ pm.test("compare 6m_qa_salary", function () {
 
 
 21. Проверить, что параметр **u_salary_5_years** равен salary*4.2 из request (salary забрать из request.)
+
 `pm.test("compare_u_salary_5_years", function () {
     pm.expect(resp.person.u_salary_5_years).eql((req.salary)*4.2);
 });`
