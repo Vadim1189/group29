@@ -27,13 +27,13 @@ pm.expect(pm.response.text()).to.include("This is the first responce from server
 2. Статус код **200**   
 ``` js
  pm.test("Status code is 200", function () {
-    pm.response.to.have.status(200); 
-}); 
+    pm.response.to.have.status(200); }); 
 ```
 
 3. Спарсить response **body** в json.   
 ``` js
-const jsonData = pm.response.json(); ```
+const jsonData = pm.response.json(); 
+```
 
 
 4. Проверить, что name в ответе равно **name s request** (name вбить руками.)
