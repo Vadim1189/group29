@@ -1,5 +1,6 @@
+Here I posted my homework for learning REST API testing with Postman
 # Homework 8. Postman. Part2. 
-Here I posted my homework for learning REST API testing with potman
+
 
 ---
   ##        [162.55.220.72:5005](http://162.55.220.72:5005/first)   Endpoint /first
@@ -13,8 +14,8 @@ pm.response.to.have.status(200); });
 
 3. Проверить, что в **body** приходит правильный string.
 ``` js
-` pm.test("Body matches string", function () {
-pm.expect(pm.response.text()).to.include("This is the first responce from server!"); }); `
+pm.test("Body matches string", function () {
+pm.expect(pm.response.text()).to.include("This is the first responce from server!"); });
 ```
 ---
 
@@ -24,13 +25,15 @@ pm.expect(pm.response.text()).to.include("This is the first responce from server
 
 1. Отправить запрос
 2. Статус код **200**   
-` pm.test("Status code is 200", function () {
+``` js
+ pm.test("Status code is 200", function () {
     pm.response.to.have.status(200); 
-}); `
-
+}); 
+```
 
 3. Спарсить response **body** в json.   
-` const jsonData = pm.response.json(); `
+``` js
+const jsonData = pm.response.json(); ```
 
 
 4. Проверить, что name в ответе равно **name s request** (name вбить руками.)
