@@ -7,8 +7,10 @@ Here I posted my homework for learning REST API testing with potman
 1. Отправить запрос.
 2. Статус код **200** 
 
- ` pm.test("Status code is 200", function () {
-pm.response.to.have.status(200); }); `
+ ``` js
+ pm.test("Status code is 200", function () {
+pm.response.to.have.status(200); }); 
+```
 
 3. Проверить, что в **body** приходит правильный string.
 
