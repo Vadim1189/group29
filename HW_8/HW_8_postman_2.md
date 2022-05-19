@@ -1,8 +1,8 @@
 # Homework 8. Postman. Part2. 
+Here I posted my homework for learning REST API testing with potman
 
 
-
-##        [162.55.220.72:5005](http://162.55.220.72:5005/first)   Endpoint /first
+  ##        [162.55.220.72:5005](http://162.55.220.72:5005/first)   Endpoint /first
  
 1. Отправить запрос.
 2. Статус код **200** 
