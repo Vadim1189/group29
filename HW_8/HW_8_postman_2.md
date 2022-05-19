@@ -1,11 +1,5 @@
 ## Homework 8. Postman. Part2. 
-#
- #
- #
- #
-#
 
-#
 
 
 ##        [162.55.220.72:5005](http://162.55.220.72:5005/first)   Endpoint /first
