@@ -1,22 +1,22 @@
 # Homework 8. Postman. Part2. 
 Here I posted my homework for learning REST API testing with potman
 
-
+---
   ##        [162.55.220.72:5005](http://162.55.220.72:5005/first)   Endpoint /first
  
 1. Отправить запрос.
 2. Статус код **200** 
-
  ``` js
  pm.test("Status code is 200", function () {
 pm.response.to.have.status(200); }); 
 ```
 
 3. Проверить, что в **body** приходит правильный string.
-
+``` js
 ` pm.test("Body matches string", function () {
 pm.expect(pm.response.text()).to.include("This is the first responce from server!"); }); `
-
+```
+---
 
 ##        [162.55.220.72:5005](http://162.55.220.72:5005/user_info_3 )   Endpoint user_info_3 
 
