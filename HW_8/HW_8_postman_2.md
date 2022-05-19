@@ -45,7 +45,8 @@ pm.expect(pm.response.text()).to.include("This is the first responce from server
 });`
 
 
-6. Проверить, что salary в ответе равно **salary s request** (salary вбить рукteами.) ok
+6. Проверить, что salary в ответе равно **salary s request** (salary вбить рукteами.)
+
 `pm.test("check_salary", function () {
     pm.expect(jsonData.salary).to.eql(3800)
 });`
