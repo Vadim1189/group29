@@ -200,14 +200,14 @@ pm.test("compare 6m_qa_salary", function () {
 
 22. Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
 
-`for(let m in resp.person) {
+``for(let m in resp.person) {
     if(typeof(resp.person[m]) == 'object') {
         console.log(m + ':')
         for(let i = 0; i<Object.keys(resp.person[m]).length;i++) {
             console.log(resp.person[m][i])
     }}
     else { console.log(m + ':'+ resp.person[m])
-        }}`
+        }}``
 
 
 
