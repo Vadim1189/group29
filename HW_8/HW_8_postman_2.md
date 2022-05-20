@@ -536,7 +536,7 @@ pm.test("compare 12m_qa_salary", function () {
 18. Проверить, что параметр qa_salary_after_3.5_years равен salary*3.8 из request (salary забрать из request.)
 ``` js
 pm.test("compare 12m_qa_salary", function () {
-    pm.expect(resp.qa_salary_after_12_months).eql(req.salary*2.7);
+    pm.expect(['resp.qa_salary_after_3.5_years']).eql(req.salary*3.8);
 });
 ```
 19. Проверить, что в параметре person, 1-й элемент из u_name равен salary из request (salary забрать из request.)
