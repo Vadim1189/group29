@@ -256,7 +256,7 @@ for(let m in resp.person) {
 <br>
 
 
-## [Сервер 162.55.220.72:5005](http://162.55.220.72:5005//object_info_3)   Endpoint /object_info_3
+## [Сервер 162.55.220.72:5005](http://162.55.220.72:5005/object_info_3)   Endpoint /object_info_3
 
 
 1. Отправить запрос.
@@ -328,4 +328,115 @@ pm.test("param age equal 4", function () {
 });
 ```
 ---
+<br>
 
+
+
+<br>
+
+## [Сервер 162.55.220.72:5005](http://162.55.220.72:5005/object_info_4)   Endpoint /object_info_4
+
+
+1. Отправить запрос.
+`http://162.55.220.72:5005/object_info_4?name=Oleg&age=32&salary =3800`
+
+2. Статус код 200
+``` js
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+3. Спарсить response body в json.
+``` js
+const resp = pm.response.json();
+```
+
+4. Спарсить request.
+``` js
+const req1 = pm.request.url.query.toObject();
+```
+5. Проверить, что name в ответе равно name s request (name забрать из request.)
+``` js
+pm.test("compare name", function () {
+    pm.expect(resp.name).eql(req1.name);
+});
+```
+6. Проверить, что age в ответе равно age из request (age забрать из request.)
+``` js
+pm.test("compare age", function () {
+    pm.expect(resp.age).eql(+req1.age);
+});
+```
+7. Вывести в консоль параметр salary из request.
+``` js
+console.log(req1.salary);
+```
+8. Вывести в консоль параметр salary из response.
+``` js
+console.log(resp.salary);
+```
+9. Вывести в консоль 0-й элемент параметра salary из response.
+``` js
+console.log(resp.salary[0]);
+```
+
+10. Вывести в консоль 1-й элемент параметра salary параметр salary из response.
+``` js
+console.log(resp.salary[1]);
+```
+
+11. Вывести в консоль 2-й элемент параметра salary параметр salary из response.
+``` js
+console.log(resp.salary[2]);
+```
+12. Проверить, что 0-й элемент параметра salary равен salary из request (salary забрать из request.)
+``` js
+pm.test("compare salary", function () {
+    pm.expect(+resp.salary[0]).eql(+req1.salary);
+});
+```
+13. Проверить, что 1-й элемент параметра salary равен salary*2 из request (salary забрать из request.)
+``` js
+pm.test("compare salary", function () {
+    pm.expect(+resp.salary[1]).eql(req1.salary*2);
+});
+```
+14. Проверить, что 2-й элемент параметра salary равен salary*3 из request (salary забрать из request.)
+``` js
+pm.test("compare salary", function () {
+    pm.expect(+resp.salary[2]).eql(+req1.salary*3);
+});
+```
+
+15. Создать в окружении переменную name
+``` js
+const nameResp = resp.name;
+```
+16. Создать в окружении переменную age
+``` js
+const ageResp = resp.age;
+```
+17. Создать в окружении переменную salary
+``` js
+const salaryResp = resp.salary;
+```
+18. Передать в окружение переменную name
+``` js
+pm.environment.set("nameRespEnv",nameResp);
+```
+19. Передать в окружение переменную age
+``` js
+pm.environment.set("ageRespEnv",ageResp);
+```
+20. Передать в окружение переменную salary
+``` js
+pm.environment.set("salaryRespEnv",salaryResp[0]);
+```
+
+21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.
+``` js
+for (let i = 0; i<resp.salary.length; i++) {
+    console.log(resp.salary[i] + " test");
+};
+```
+---
