@@ -102,6 +102,12 @@ pm.test("compare_u_salary_1_5_year", function () {
 ```
 ---
 
+<br>
+
+
+<br>
+
+
 ##        [162.55.220.72:5005](http://162.55.220.72:5005/user_info_2)   Endpoint /user_info_2
 
 
