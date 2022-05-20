@@ -7,7 +7,7 @@ Here I posted my homework for learning REST API testing with Postman
 <br>
 
 
-  ##        [162.55.220.72:5005](http://162.55.220.72:5005/first)   Endpoint /first
+  ##        [Сервер 162.55.220.72:5005](http://162.55.220.72:5005/first)   Endpoint /first
  
 1. Отправить запрос.
 2. Статус код **200** 
@@ -28,7 +28,7 @@ pm.expect(pm.response.text()).to.include("This is the first responce from server
 
 <br>
 
-##        [162.55.220.72:5005](http://162.55.220.72:5005/user_info_3 )   Endpoint /user_info_3 
+##        [Сервер 162.55.220.72:5005](http://162.55.220.72:5005/user_info_3 )   Endpoint /user_info_3 
 
 
 
@@ -108,7 +108,7 @@ pm.test("compare_u_salary_1_5_year", function () {
 <br>
 
 
-##        [162.55.220.72:5005](http://162.55.220.72:5005/user_info_2)   Endpoint /user_info_2
+##        [Сервер 162.55.220.72:5005](http://162.55.220.72:5005/user_info_2)   Endpoint /user_info_2
 
 
 1. Вставить параметр salary из окружения в **request**
@@ -239,7 +239,7 @@ pm.test("compare_u_salary_5_years", function () {
 ```
 22. Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
 
-``' js
+``` js
 for(let m in resp.person) {
     if(typeof(resp.person[m]) == 'object') {
         console.log(m + ':')
@@ -249,6 +249,83 @@ for(let m in resp.person) {
     else { console.log(m + ':'+ resp.person[m])
         }}
    ```
+---
+<br>
 
 
+<br>
+
+
+## [Сервер 162.55.220.72:5005](http://162.55.220.72:5005//object_info_3)   Endpoint /object_info_3
+
+
+1. Отправить запрос.
+`http://162.55.220.72:5007/object_info_3?name=Oleg&age=32&salary=3800`
+
+2. Статус код 200
+``` js
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+3. Спарсить response body в json.
+``` js
+resp = pm.response.json();
+```
+
+4. Спарсить request.
+``` js
+req = pm.request.url.query.toObject();
+```
+5. Проверить, что name в ответе равно name s request (name забрать из request.)
+``` js
+pm.test("compare_name", function () {
+    pm.expect(resp.name).to.eql(req.name);
+});
+```
+
+6. Проверить, что age в ответе равно age s request (age забрать из request.)
+``` js
+pm.test("compare_age", function () {
+    pm.expect(resp.age).to.eql(req.age);
+});
+```
+
+7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+``` js
+pm.test("compare_salary", function () {
+    pm.expect(+resp.salary).to.eql(+req.salary);
+});
+```
+
+8. Вывести в консоль параметр family из response.
+``` js
+console.log(resp.family)
+```
+
+9. Проверить, что у параметра dog есть параметры name.
+``` js
+pm.test("dog_has_property_name", function () {
+    pm.expect(resp.family.pets.dog).to.have.property("name");
+});
+```
+10. Проверить, что у параметра dog есть параметры age.
+``` js
+pm.test("dog_has_property_age", function () {
+    pm.expect(resp.family.pets.dog).to.have.property("age");
+});
+```
+11. Проверить, что параметр name имеет значение Luky.
+``` js
+pm.test("param name equal Luky", function () {
+    pm.expect(resp.family.pets.dog.name).to.eql("Luky");
+});
+```
+12. Проверить, что параметр age имеет значение 4.
+``` js
+pm.test("param age equal 4", function () {
+    pm.expect(resp.family.pets.dog.age).to.eql(4);
+});
+```
+---
 
