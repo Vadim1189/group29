@@ -4,7 +4,6 @@ Here I posted my homework for learning REST API testing with Postman
 
 
 
-
 <br>
 
 
@@ -232,10 +231,6 @@ pm.test("compare_u_salary_5_years", function () {
     pm.expect(resp.person.u_salary_5_years).eql((req.salary)*4.2);
 });
 ```
-
-
-
-
 22. Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
 
 ``' js
