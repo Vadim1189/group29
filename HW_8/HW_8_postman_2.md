@@ -18,10 +18,10 @@ pm.response.to.have.status(200); });
 
 3. Проверить, что в **body** приходит правильный string.
 ``` js
-pm.test("Body matches string", function () {
+pm.test("to.have.body", function () {
 pm.expect(pm.response.text()).to.include("This is the first responce from server!"); });
 
-pm.test("Body is correct", function () {
+pm.test("to.have.body", function () {
     pm.response.to.have.body("This is the first responce from server!");
 ```
 ---
