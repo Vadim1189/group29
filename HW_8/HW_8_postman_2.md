@@ -20,6 +20,9 @@ pm.response.to.have.status(200); });
 ``` js
 pm.test("Body matches string", function () {
 pm.expect(pm.response.text()).to.include("This is the first responce from server!"); });
+
+pm.test("Body is correct", function () {
+    pm.response.to.have.body("This is the first responce from server!");
 ```
 ---
 
