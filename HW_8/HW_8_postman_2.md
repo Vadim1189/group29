@@ -20,7 +20,9 @@ pm.response.to.have.status(200); });
 ``` js
 pm.test("to.have.body", function () {
 pm.expect(pm.response.text()).to.include("This is the first responce from server!"); });
-
+```
+или
+``` js
 pm.test("to.have.body", function () {
     pm.response.to.have.body("This is the first responce from server!");
 ```
