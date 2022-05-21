@@ -444,6 +444,14 @@ for (let i = 0; i<resp.salary.length; i++) {
     console.log(resp.salary[i] + " test");
 };
 ```
+или
+``` js
+for (let i in resp.salary){
+    console.log(i, resp.salary[i])
+}
+```
+
+
 ---
 
 ## [Сервер 162.55.220.72:5005](http://162.55.220.72:5005/user_info_2)   Endpoint /user_info_2
