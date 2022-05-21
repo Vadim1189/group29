@@ -4,6 +4,7 @@ Here I posted my homework for learning REST API testing with Postman
 
 
 
+
 <br>
 
 
@@ -29,6 +30,8 @@ pm.test("to.have.body", function () {
 ---
 
 <br>
+
+
 
 
 <br>
@@ -110,6 +113,8 @@ pm.test("compare_u_salary_1_5_year", function () {
 <br>
 
 
+
+
 <br>
 
 
@@ -186,6 +191,7 @@ pm.test("param age equal 4", function () {
 ```
 ---
 <br>
+
 
 
 
@@ -435,6 +441,7 @@ for(let m in resp.person) {
         }
 }
 ```
+---
 ---
 
 
