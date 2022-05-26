@@ -434,6 +434,7 @@ pm.test("compare_u_salary_5_years", function () {
 for(let m in resp.person) {
     if(typeof(resp.person[m]) == 'object') {
         console.log(m + ':')
+        
         for(let i = 0; i<Object.keys(resp.person[m]).length;i++) {
             console.log(resp.person[m][i])
       }
