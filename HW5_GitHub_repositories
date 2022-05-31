@@ -70,6 +70,11 @@ https://github.com/Vadim1189/JSON/blob/main/bug_report.json ->       Edit this f
  19. Сделать Commit changes (сохранить) изменения на веб интерфейсе. 
 -> Commit changes
  20. Синхронизировать внешний и локальный репозиторий JSON: git pull
+git pull
+git fetch  
+//Команда git fetch связывается с удалённым репозиторием и забирает из него все изменения,
+//которых у вас пока нет и сохраняет их локально. 
+ 
 
 
 
