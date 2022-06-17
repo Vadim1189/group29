@@ -49,6 +49,7 @@ $ curl -X POST "http://162.55.220.72:5005/get_method?name="Vadim"&age=31"
 
 	 
 	 
+	 
 script.sh
 
 cd e:/gbash
