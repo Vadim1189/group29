@@ -75,6 +75,10 @@ pm.test("check_salary", function () {
 ``` js
 let req = request.data
 ```
+или
+``` js
+let req = pm.request.body.formdata.toObject();
+```
 
 8. Проверить, что name в ответе равно **name s request** (name забрать из request.)
 ``` js
