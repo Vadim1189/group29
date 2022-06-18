@@ -99,3 +99,5 @@ getDate("09.10.2021","10.10.2021")
 console.log(newArr)
 
 
+
+
