@@ -78,6 +78,7 @@ vim checklist.txt
 6 checking	/название проверки
 7 result		/результат
 
+
 8. Запушить структуру на внешний репозиторий
 git add checklist.txt
 
